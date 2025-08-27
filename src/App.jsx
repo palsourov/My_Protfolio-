@@ -10,16 +10,13 @@ import Footer from "./Components/Footer";
 
 function App() {
   return (
-    <div className="font-sans bg-gray-100 text-gray-800">
-      <Navbar />
+    <div >
+     
       <main className="max-w-6xl mx-auto px-4">
-        <Home />
-        <About />
-        <Skills />
-        <Projects/>
-        <Contact />
+       
+        
       </main>
-      <Footer />
+      
     </div>
   );
 }
