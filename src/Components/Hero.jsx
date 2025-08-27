@@ -21,8 +21,8 @@ function Hero() {
           Hi, I'm <span className="text-emerald-600 dark:text-emerald-400">Sourov Pal</span>
         </h1>
         <p className="text-lg md:text-xl mb-6 text-gray-700 dark:text-gray-300 max-w-xl">
-          A passionate <span className="font-semibold text-indigo-600 dark:text-indigo-400">MERN Stack Developer</span> 
-          focused on creating beautiful, responsive, and high-performance web apps.
+          A passionate <span className="font-semibold text-indigo-600 dark:text-indigo-400"> MERN Stack Developer</span>  focused on frontend development  
+              and creating beautiful, responsive, and high-performance web apps.
         </p>
 
         {/* Buttons */}
