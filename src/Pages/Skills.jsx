@@ -16,7 +16,7 @@ const skills = [
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-20 px-6  text-white text-center">
+    <section id="skills" className="py-20 px-6   text-white text-center">
       <h2 className="text-4xl text-gray-800 font-bold mb-12">My Skills</h2>
       <div className="grid md:grid-cols-4 sm:grid-cols-2 gap-10 max-w-6xl mx-auto">
         {skills.map((skill, index) => (

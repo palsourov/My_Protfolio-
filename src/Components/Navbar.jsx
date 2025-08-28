@@ -1,67 +1,103 @@
-import React, { useState } from "react";
-import ThemeToggle from "../Pages/ThemeToggle";
-import { Menu, X } from "lucide-react"; // hamburger icons
+import React from "react";
+import { NavLink } from "react-router";
 
-function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
-
+const Navbar = () => {
+  const NavList = (
+    <>
+      <NavLink
+        className={({ isActive }) =>
+          isActive
+            ? "border-b-2   font-semibold text-yellow-400 lg:text-xl text-[17px]"
+            : "lg:text-xl  text-[17px]"
+        }
+        to="/"
+      >
+        Home
+      </NavLink>
+      <NavLink
+        className={({ isActive }) =>
+          isActive
+            ? "border-b-2 font-semibold text-yellow-400 lg:text-xl text-[17px]"
+            : "lg:text-xl  text-[17px]"
+        }
+        to="/About"
+      >
+        About
+      </NavLink>
+      <NavLink
+        className={({ isActive }) =>
+          isActive
+            ? "border-b-2 font-semibold text-yellow-400 lg:text-xl text-[17px]"
+            : "lg:text-xl  text-[17px]"
+        }
+        to="/Skills"
+      >
+        {" "}
+        Skills
+      </NavLink>
+      <NavLink
+        className={({ isActive }) =>
+          isActive
+            ? "border-b-2 font-semibold text-yellow-400 lg:text-xl text-[17px]"
+            : "lg:text-xl  text-[17px]"
+        }
+        to="/MyRecipes"
+      >
+        {" "}
+        Projects
+      </NavLink>
+      <NavLink
+        className={({ isActive }) =>
+          isActive
+            ? "border-b-2  font-semibold text-yellow-400 lg:text-xl text-[17px]"
+            : "lg:text-xl  text-[17px]"
+        }
+        to="/Contact"
+      >
+        {" "}
+        Contact
+      </NavLink>
+    </>
+  );
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-gray-700 text-white shadow-md">
-      <div className="max-w-7xl mx-auto flex justify-between items-center py-6 px-8">
-        {/* Logo */}
-        <h1 className="text-3xl md:text-3xl font-semibold tracking-wide cursor-pointer hover:scale-110 transition">
-          Sourov<span className="text-yellow-300">Pal</span>
-        </h1>
-
-        {/* Desktop Menu */}
-        <ul className="hidden text-xl md:flex space-x-8 font-medium">
-          {["Home", "About", "Skills", "Projects", "Contact"].map((item) => (
-            <li key={item}>
-              <a
-                href={`#${item.toLowerCase()}`}
-                className="relative group hover:text-yellow-300 transition"
+    <div>
+      <div className="navbar fixed top-0 left-0 w-full z-50 bg-gray-700 text-white shadow-md  ">
+        <div className="navbar-start  lg:max-w-7xl mx-auto   py-6 px-8">
+          <div className="dropdown">
+            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
               >
-                {item}
-                <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-yellow-300 transition-all group-hover:w-full"></span>
-              </a>
-            </li>
-          ))}
-        </ul>
-
-        {/* Right Side */}
-        <div className="flex items-center space-x-4">
-        
-
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden text-white"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            {isOpen ? <X size={28} /> : <Menu size={28} />}
-          </button>
+                {" "}
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />{" "}
+              </svg>
+            </div>
+            <ul
+              tabIndex={0}
+              className="menu menu-sm dropdown-content  rounded-box z-1 mt-3 w-52 p-2 shadow bg-gray-600"
+            >
+              {NavList}
+            </ul>
+          </div>
+          <h1 className="text-3xl md:text-3xl font-semibold tracking-wide cursor-pointer hover:scale-110 transition">
+          Sourov<span className="text-yellow-400">Pal</span>
+        </h1>
+        </div>
+        <div className="navbar-center hidden lg:flex  lg:max-w-7xl mx-auto  ">
+          <ul className="menu menu-horizontal px-1 gap-x-8">{NavList}</ul>
         </div>
       </div>
-
-      {/* Mobile Dropdown */}
-      {isOpen && (
-        <div className="md:hidden bg-sky-900 text-white shadow-lg">
-          <ul className="flex flex-col space-y-4 py-6 px-6 font-medium">
-            {["Home", "About", "Skills", "Projects", "Contact"].map((item) => (
-              <li key={item}>
-                <a
-                  href={`#${item.toLowerCase()}`}
-                  className="block hover:text-yellow-300 transition"
-                  onClick={() => setIsOpen(false)} // close menu on click
-                >
-                  {item}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
-    </nav>
+    </div>
   );
-}
+};
 
 export default Navbar;

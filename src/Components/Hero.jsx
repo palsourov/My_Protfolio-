@@ -1,11 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router";
 
 function Hero() {
   return (
     <section
       id="home"
-      className="h-screen mt-20 gap-x-20 flex flex-col-reverse md:flex-row items-center justify-center  md:px-20 
+      className="h-screen  gap-x-20 flex flex-col-reverse md:flex-row items-center justify-center  md:px-20 
                 "
     >
       {/* Left Side - Text */}
@@ -26,14 +27,17 @@ function Hero() {
         </p>
 
         {/* Buttons */}
+        
         <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-          <a
+            <Link to="/All_Projects">
+               <div
             href="#projects"
             className="bg-gradient-to-r from-indigo-600 to-emerald-500 text-white px-6 py-3 
                        rounded-full shadow-lg hover:scale-105 transform transition"
           >
             View My Work
-          </a>
+          </div>
+        </Link>
           <a
             href="/SourovPal_CV.pdf" // place your CV in public folder
             download
@@ -43,6 +47,7 @@ function Hero() {
             Download CV
           </a>
         </div>
+        
       </motion.div>
 
       {/* Right Side - Image */}

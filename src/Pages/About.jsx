@@ -6,7 +6,7 @@ const About = () => {
     
     <section
       id="about"
-      className="py-20 px-6  rounded-2xl md:px-20 bg-gradient-to-r from-gray-900 to-gray-800 text-white"
+      className="py-20 px-6 flex-col justify-center items-center  rounded-2xl md:px-20 bg-gradient-to-r  from-gray-900 to-gray-800 text-white"
     >
         <h2 className="text-4xl md:text-5xl font-bold mb-6 border-b-4 border-emerald-500 inline-block pb-2">
             About Me
