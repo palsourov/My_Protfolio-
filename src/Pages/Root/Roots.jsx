@@ -7,7 +7,7 @@ import { div } from "framer-motion/client";
 const Roots = () => {
   return (
     <div className="font-sans bg-gray-100 p-30 text-gray-800">
-      <div className="max-w-7xl mx-auto px-4 ">
+      <div className=" mx-auto px-4 ">
         <Navbar></Navbar>
          <Outlet ></Outlet>
         <Footer></Footer>
