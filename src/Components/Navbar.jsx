@@ -1,5 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router";
+import { FaAngleLeft ,FaAngleRight} from "react-icons/fa";
+
 
 const Navbar = () => {
   const NavList = (
@@ -7,8 +9,8 @@ const Navbar = () => {
       <NavLink
         className={({ isActive }) =>
           isActive
-            ? "border-b-2   font-semibold text-yellow-400 lg:text-xl text-[17px]"
-            : "lg:text-xl  text-[17px]"
+            ? "border-b-2   font-semibold text-indigo-400 lg:text-xl text-[17px] "
+            : "lg:text-xl font-semibold text-indigo-300 text-[17px]"
         }
         to="/"
       >
@@ -17,8 +19,8 @@ const Navbar = () => {
       <NavLink
         className={({ isActive }) =>
           isActive
-            ? "border-b-2 font-semibold text-yellow-400 lg:text-xl text-[17px]"
-            : "lg:text-xl  text-[17px]"
+            ? "border-b-2   font-semibold text-indigo-400 lg:text-xl text-[17px] "
+            : "lg:text-xl font-semibold text-indigo-300 text-[17px]"
         }
         to="/About"
       >
@@ -27,8 +29,8 @@ const Navbar = () => {
       <NavLink
         className={({ isActive }) =>
           isActive
-            ? "border-b-2 font-semibold text-yellow-400 lg:text-xl text-[17px]"
-            : "lg:text-xl  text-[17px]"
+            ? "border-b-2   font-semibold text-indigo-400 lg:text-xl text-[17px] "
+            : "lg:text-xl font-semibold text-indigo-300 text-[17px]"
         }
         to="/Skills"
       >
@@ -38,8 +40,8 @@ const Navbar = () => {
       <NavLink
         className={({ isActive }) =>
           isActive
-            ? "border-b-2 font-semibold text-yellow-400 lg:text-xl text-[17px]"
-            : "lg:text-xl  text-[17px]"
+            ? "border-b-2   font-semibold text-indigo-400 lg:text-xl text-[17px] "
+            : "lg:text-xl font-semibold text-indigo-300 text-[17px]"
         }
         to="/MyRecipes"
       >
@@ -49,8 +51,8 @@ const Navbar = () => {
       <NavLink
         className={({ isActive }) =>
           isActive
-            ? "border-b-2  font-semibold text-yellow-400 lg:text-xl text-[17px]"
-            : "lg:text-xl  text-[17px]"
+            ? "border-b-2   font-semibold text-indigo-400 lg:text-xl text-[17px] "
+            : "lg:text-xl font-semibold text-indigo-300 text-[17px]"
         }
         to="/Contact"
       >
@@ -61,7 +63,7 @@ const Navbar = () => {
   );
   return (
     <div>
-      <div className="navbar fixed top-0 left-0 w-full z-50 bg-gray-700 text-white shadow-md  ">
+      <div className="navbar fixed top-0 left-0 w-full z-50 bg-[#001c43] text-white shadow-md  ">
         <div className="navbar-start  lg:max-w-7xl mx-auto   py-6 px-8">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -88,8 +90,16 @@ const Navbar = () => {
               {NavList}
             </ul>
           </div>
-          <h1 className="text-3xl md:text-3xl font-semibold tracking-wide cursor-pointer hover:scale-110 transition">
-          Sourov<span className="text-yellow-400">Pal</span>
+          <h1 className="text-5xl md:text-3xl font-bold mb-4 
+                     bg-gradient-to-r from-indigo-400 via-white 
+                     bg-clip-text text-transparent">
+       <div className="flex items-center gap-x-2">
+           <FaAngleLeft className="text-white" />
+            Sourov Pal
+            <FaAngleRight className="text-white" />
+
+       </div>
+ 
         </h1>
         </div>
         <div className="navbar-center hidden lg:flex  lg:max-w-7xl mx-auto  ">
