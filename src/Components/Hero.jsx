@@ -6,13 +6,13 @@ function Hero() {
   return (
     <section
       id="home"
-      className="h-screen mt-25 bg-[#051a35] gap-x-20 flex flex-col-reverse md:flex-row items-center justify-center md:px-20"
+      className="h-screen lg:mt-15    bg-[#051a35] gap-x-20 flex flex-col-reverse md:flex-row items-center justify-center md:px-20"
     >
       {/* Left Side - Text */}
       <motion.div
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8 }}
+        transition={{ duration: 0.9 }}
         className="flex-1 text-center md:text-left"
       >
         <h1

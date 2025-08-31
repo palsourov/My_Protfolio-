@@ -1,20 +1,40 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { div } from "framer-motion/client";
 
 const About = () => {
   return (
+    <>  
     
-    <section
-      id="about"
-      className="py-20 px-6 flex-col justify-center items-center  rounded-2xl md:px-20 bg-gradient-to-r  from-gray-900 to-gray-800 text-white"
-    >
-        <h2 className="text-4xl md:text-5xl font-bold mb-6 border-b-4 border-emerald-500 inline-block pb-2">
+    
+    <div className="lg:px-30 flex-col justify-center items-center min-h-screen mb-10 lg:mt-30  py-8 ">
+      <div className="text-center mb-10">
+        <h2 className="text-4xl text-indigo-400 md:text-5xl  font-bold mb-6 border-b-4 border-indigo-200 inline-block pb-2">
             About Me
           </h2>
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center md:space-x-10">
+      </div>
+         
+    <section
+      id="about"
+      className="py-10 px-6 lg:flex   gap-10 justify-center items-center  rounded-2xl md:px-20 bg-gradient-to-r  from-gray-900 to-gray-800 text-white"
+    >
+        <motion.div 
+        initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+        className="w-84 h-84 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-indigo-200 shadow-lg">
+            <img
+              src="https://i.ibb.co.com/TDT7xVY5/Sourov.jpg" // Replace with your photo
+              alt="Profile"
+              className="object-cover w-full h-full hover:scale-110 transition duration-500"
+            />
+          </motion.div>
+
+      <div className="  lg:w-[70%]  mx-auto flex flex-col md:flex-row items-center md:space-x-10">
         {/* Left - Text */}
         <motion.div
-          initial={{ opacity: 0, x: -50 }}
+          initial={{ opacity: 0, x: 50 }}
+             whileHover={{ scale: 1.1, y: -5 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
           className="flex-1"
@@ -31,9 +51,7 @@ const About = () => {
             Recently, I successfully completed a comprehensive web development course at <span className="text-yellow-400 font-semibold">Programming Hero</span> 
             which enhanced my skills in <span className="text-indigo-400 font-semibold">JavaScript, React, Node.js, and MongoDB</span>.
           </p>
-          <p className="text-gray-300 mb-6 text-lg md:text-xl leading-relaxed">
-            I am passionate about learning new technologies and constantly improving my skills to deliver high-quality, scalable web applications.
-          </p>
+         
 
           {/* Skills / Technologies */}
           <div className="flex flex-wrap gap-4 mt-4">
@@ -61,6 +79,8 @@ const About = () => {
        
       </div>
     </section>
+  </div>
+  </>
   );
 };
 
