@@ -37,17 +37,16 @@ function Hero() {
 
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-          
-
+    
           <a
-            href="/SourovPal_CV.pdf"
-            download
-            className="bg-white dark:bg-gray-800 text-indigo-700 dark:text-white px-6 py-3 
-                       rounded-full shadow-md border hover:scale-105 transform transition
-                       drop-shadow-[0_2px_6px_rgba(255,255,255,0.4)]"
-          >
-            Download CV
-          </a>
+    href="/SourovPal_CV.pdf"
+    download
+    className="bg-white dark:bg-gray-800 text-indigo-700 dark:text-white px-6 py-3 
+               rounded-full shadow-md border hover:scale-105 transform transition
+               drop-shadow-[0_2px_6px_rgba(255,255,255,0.4)]"
+  >
+    Download CV
+  </a>
         </div>
       </motion.div>
 

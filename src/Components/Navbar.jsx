@@ -64,7 +64,7 @@ const Navbar = () => {
   return (
     <div>
       <div className="navbar  fixed top-0 left-0 w-full z-50 bg-[#001c43] text-white shadow-md  ">
-        <div className="navbar-start  flex-row-reverse  justify-between items-center w-full px-4 lg:max-w-7xl mx-auto   lg:py-6 lg:px-8">
+        <div className="navbar-start  flex-row-reverse  justify-between items-center w-full px-4 lg:max-w-7xl mx-auto   lg:py-3 lg:px-8">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
               <svg
@@ -90,7 +90,7 @@ const Navbar = () => {
               {NavList}
             </ul>
           </div>
-          <h1 className="lg:text-5xl text-xl md:text-3xl font-bold mb-4 
+          <h1 className="lg:text-4xl text-xl md:text-3xl font-bold mb-4 
                      bg-gradient-to-r from-indigo-400 via-white 
                      bg-clip-text text-transparent">
        <div className="flex items-center gap-x-2">

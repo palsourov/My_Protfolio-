@@ -7,7 +7,7 @@ const About = () => {
     <>  
     
     
-    <div className="lg:px-30 flex-col justify-center items-center min-h-screen mb-10 lg:mt-30  py-8 ">
+    <div className="lg:px-30 flex-col justify-center items-center min-h-screen mb-10 lg:mt-20  py-8 ">
       <div className="text-center mb-10">
         <h2 className="text-4xl text-indigo-400 md:text-5xl  font-bold mb-6 border-b-4 border-indigo-200 inline-block pb-2">
             About Me

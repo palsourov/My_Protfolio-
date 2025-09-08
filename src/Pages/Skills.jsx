@@ -16,8 +16,8 @@ const skills = [
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-20 px-6   text-white text-center">
-      <h2 className="text-4xl text-gray-800 font-bold mb-12">My Skills</h2>
+    <section id="skills" className="lg:mt-20 lg:py-15  px-6 flex-col justify-center items-center  text-center min-h-screen ">
+      <h2 className="text-4xl  font-bold bg-clip-text text-transparent bg-gradient-to-b from-indigo-400 to-gray-200 mb-12">My Skills</h2>
       <div className="grid md:grid-cols-4 sm:grid-cols-2 gap-10 max-w-6xl mx-auto">
         {skills.map((skill, index) => (
           <motion.div 
@@ -31,7 +31,7 @@ const Skills = () => {
             <div className="flex justify-center mb-4">
               {skill.icon}
             </div>
-            <h3 className="text-2xl font-semibold mb-2">{skill.name}</h3>
+            <h3 className="text-2xl font-semibold mb-2 text-white  ">{skill.name}</h3>
             <div className="w-full bg-gray-700 rounded-full h-4">
               <motion.div
                 className="bg-yellow-500 h-4 rounded-full"
@@ -41,7 +41,7 @@ const Skills = () => {
                 transition={{ duration: 1.5 }}
               ></motion.div>
             </div>
-            <p className="mt-2 text-sm">{skill.level}</p>
+            <p className="mt-2 text-white text-sm">{skill.level}</p>
           </motion.div>
         ))}
       </div>
