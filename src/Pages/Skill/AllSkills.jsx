@@ -30,14 +30,13 @@ const skills = [
   { name: "Vercel", icon: <SiVercel size={40} color="#000000" />, level: "Intermediate", category: "Tools" },
 ];
 
-const Skills = () => {
+const AllSkills = () => {
   const [filter, setFilter] = useState("All");
 
   // ✅ Filtering logic
   const filteredSkills = filter === "All" ? skills : skills.filter(skill => skill.category === filter);
 
-  // ✅ Show only first 8 on this page
-  const limitedSkills = filteredSkills.slice(0, 8);
+ 
 
   return (
     <section id="skills" className="lg:mt-20 lg:py-15 px-6 flex-col justify-center items-center text-center min-h-screen">
@@ -46,7 +45,7 @@ const Skills = () => {
       </h2>
 
       {/* ✅ Subtitle */}
-      <p className="text-gray-400 text-lg mb-8">Explore the technologies, frameworks, and tools I use to design, build, and deploy modern web applications. I work with</p>
+      <p className="text-gray-400 text-lg mb-8">Explore the technologies, frameworks, and tools I use to design, build, and deploy modern web applications.</p>
 
       {/* ✅ Filter Buttons */}
       <div className="flex justify-center gap-4 mb-10 flex-wrap">
@@ -67,7 +66,7 @@ const Skills = () => {
 
       {/* ✅ Skills Grid */}
       <div className="grid md:grid-cols-4 sm:grid-cols-2 gap-10 max-w-6xl mx-auto">
-        {limitedSkills.map((skill, index) => (
+        {filteredSkills.map((skill, index) => (
           <motion.div
             key={index}
             whileHover={{ scale: 1.1, y: -5 }}
@@ -100,9 +99,9 @@ const Skills = () => {
 
       {/* ✅ View More Button */}
       <div className="mt-12">
-        <Link to="AllSkills">
+        <Link to="/">
           <button className="px-6 py-3 rounded-xl bg-indigo-500 text-white font-semibold shadow-md hover:bg-indigo-600 transition-all duration-300">
-            View More
+            Go Home 
           </button>
         </Link>
       </div>
@@ -110,4 +109,4 @@ const Skills = () => {
   );
 };
 
-export default Skills;
+export default AllSkills;

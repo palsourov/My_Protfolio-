@@ -8,6 +8,7 @@ import Skills from "../Skill/Skills";
 import Projects from "../Projects/Projects";
 import Contact from "../Contact/Contact";
 import Error from "../Error";
+import AllSkills from "../Skill/AllSkills";
 
 
 
@@ -46,6 +47,11 @@ export const router = createBrowserRouter([
         index: true,
         path: "/Contact",
         Component:Contact,
+      },
+      {
+        index: true,
+        path: "/AllSkills",
+        Component: AllSkills,
       },
       
       
