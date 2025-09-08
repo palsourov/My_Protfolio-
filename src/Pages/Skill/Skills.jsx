@@ -31,17 +31,17 @@ const Skills = () => {
             <div className="flex justify-center mb-4">
               {skill.icon}
             </div>
-            <h3 className="text-2xl font-semibold mb-2 text-white  ">{skill.name}</h3>
+            <h3 className="text-2xl font-semibold mb-2 text-indigo-400  ">{skill.name}</h3>
             <div className="w-full bg-gray-700 rounded-full h-4">
               <motion.div
-                className="bg-yellow-500 h-4 rounded-full"
+                className="bg-indigo-500 h-4 rounded-full"
                 initial={{ width: 0 }}
                 whileInView={{ width: skill.level === "Advanced" ? "100%" :
                                  skill.level === "Intermediate" ? "70%" : "50%" }}
                 transition={{ duration: 1.5 }}
               ></motion.div>
             </div>
-            <p className="mt-2 text-white text-sm">{skill.level}</p>
+            <p className="mt-2 text-indigo-300 text-sm">{skill.level}</p>
           </motion.div>
         ))}
       </div>

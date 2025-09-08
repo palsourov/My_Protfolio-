@@ -1,14 +1,15 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router";
-
-import Home from "../Home";
+import Home from "../Home/Home";
+import All_Projects from "../AllProjects/All_Projects";
+import About from "../About/About"; 
 import Roots from "../Root/Roots";
+import Skills from "../Skill/Skills";
+import Projects from "../Projects/Projects";
+import Contact from "../Contact/Contact";
 import Error from "../Error";
-import All_Projects from "../All_Projects";
-import About from "../About";
-import Skills from "../Skills";
-import Projects from "../Projects";
-import Contact from "../Contact";
+
+
 
 export const router = createBrowserRouter([
   {

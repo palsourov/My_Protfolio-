@@ -1,7 +1,8 @@
 import React from "react";
-import Navbar from "../../Components/Navbar";
+
 import { Outlet } from "react-router";
-import Footer from "../../Components/Footer";
+import Navbar from "../../Components/Navbar/Navbar";
+import Footer from "../../Components/Footer/Footer";  
 import { div } from "framer-motion/client";
 
 const Roots = () => {
