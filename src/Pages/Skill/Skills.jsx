@@ -100,7 +100,7 @@ const Skills = () => {
 
       {/* ✅ View More Button */}
       <div className="mt-12">
-        <Link to="AllSkills">
+        <Link to="/AllSkills">
           <button className="px-6 py-3 rounded-xl bg-indigo-500 text-white font-semibold shadow-md hover:bg-indigo-600 transition-all duration-300">
             View More
           </button>
