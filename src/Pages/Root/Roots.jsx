@@ -10,7 +10,7 @@ const Roots = () => {
     <div className="font-sans bg-[#051a35] text-gray-800">
       <div className="   ">
         <Navbar></Navbar>
-         <Outlet  ></Outlet>
+         <Outlet></Outlet>
         <Footer></Footer>
       </div>
     </div>
