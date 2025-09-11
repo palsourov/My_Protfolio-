@@ -5,7 +5,21 @@ import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
-    <section className="bg-[#051a35] text-white py-12 px-6 md:px-16 overflow-hidden">
+    <section className="bg-[#051a35] text-white py-16 px-6 md:px-30 overflow-hidden">
+      {/* Section Heading */}
+      <motion.div
+        initial={{ opacity: 0, y: -30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, ease: "easeOut" }}
+        viewport={{ once: true }}
+        className="text-center mb-12"
+      >
+        <h2 className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-indigo-400 to-gray-200 mb-4">Contact Me</h2>
+        <p className="text-indigo-200 text-lg">
+          Have a question or want to work together? Let’s connect!
+        </p>
+      </motion.div>
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         
         {/* Left Side - Contact Form */}
@@ -19,7 +33,7 @@ const Contact = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="text-2xl font-semibold text-indigo-200 mb-4"
+            className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-indigo-400 to-gray-200 mb-4"
           >
             Get in Touch
           </motion.h3>
@@ -66,7 +80,7 @@ const Contact = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1 }}
           >
-            {[ 
+            {[
               { icon: <FaGithub />, link: "https://github.com/" },
               { icon: <FaLinkedin />, link: "https://linkedin.com/" },
               { icon: <MdEmail />, link: "mailto:youremail@example.com" },
