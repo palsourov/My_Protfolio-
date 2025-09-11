@@ -81,10 +81,10 @@ const Contact = () => {
             transition={{ delay: 1 }}
           >
             {[
-              { icon: <FaGithub />, link: "https://github.com/" },
-              { icon: <FaLinkedin />, link: "https://linkedin.com/" },
-              { icon: <MdEmail />, link: "mailto:youremail@example.com" },
-              { icon: <FaInstagram />, link: "https://instagram.com/" },
+              { icon: <FaGithub />, link: "https://github.com/palsourov" },
+              { icon: <FaLinkedin />, link: "https://www.linkedin.com/in/sourovpal" },
+              { icon: <MdEmail />, link: "mailto:sourovpal070@gmail.com" },
+              { icon: <FaInstagram />, link: "https://www.instagram.com/sourovpal070/" },
             ].map((item, idx) => (
               <motion.a
                 key={idx}
