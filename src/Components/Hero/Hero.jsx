@@ -37,8 +37,8 @@ function Hero() {
 
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-    
-          <a
+    <div className=" px-5">
+        <a
     href="/SourovPal_CV.pdf"
     download
     className="bg-white dark:bg-gray-800 text-indigo-700 dark:text-white px-6 py-3 
@@ -47,6 +47,9 @@ function Hero() {
   >
     Download CV
   </a>
+
+    </div>
+         
         </div>
       </motion.div>
 
@@ -60,7 +63,7 @@ function Hero() {
         <img
           src="https://i.ibb.co.com/TDT7xVY5/Sourov.jpg"
           alt="Sourov Pal"
-          className=" w-60 h-60 lg:w-140 lg:h-140 rounded-full object-cover 
+          className=" w-60 lg:mt-0  mt-30 h-60 lg:w-140 lg:h-140 rounded-full object-cover 
                      shadow-lg border-4 border-white dark:border-gray-400
                      drop-shadow-[0_6px_12px_rgba(255,255,255,0.3)]"
         />
