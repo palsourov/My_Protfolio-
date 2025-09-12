@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
-    <section className="bg-[#051a35] text-white py-16 px-6 md:px-30 overflow-hidden">
+    <section className="bg-[#051a35] text-white py-27 px-6 md:px-30 overflow-hidden">
       {/* Section Heading */}
       <motion.div
         initial={{ opacity: 0, y: -30 }}
