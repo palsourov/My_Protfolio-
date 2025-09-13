@@ -26,32 +26,32 @@ const Footer = () => {
           transition={{ duration: 0.6 }}
         >
           <a
-            href="https://github.com/"
+            href="https://github.com/palsourov"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-gray-400 transition-transform transform hover:scale-110"
+            className="hover:text-indigo-200 transition-transform transform hover:scale-110"
           >
             <FaGithub size={28} />
           </a>
           <a
-            href="https://linkedin.com/"
+            href="https://www.linkedin.com/in/sourovpal"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-blue-400 transition-transform transform hover:scale-110"
+            className="hover:text-indigo-200 transition-transform transform hover:scale-110"
           >
             <FaLinkedin size={28} />
           </a>
           <a
-            href="https://instagram.com/"
+            href="https://www.instagram.com/sourovpal070/"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-pink-400 transition-transform transform hover:scale-110"
+            className="hover:text-indigo-200 transition-transform transform hover:scale-110"
           >
             <FaInstagram size={28} />
           </a>
           <a
-            href="mailto:someone@example.com"
-            className="hover:text-red-400 transition-transform transform hover:scale-110"
+            href="mailto:sourovpal070@gmail.com"
+            className="hover:text-indigo-200 transition-transform transform hover:scale-110"
           >
             <MdEmail size={28} />
           </a>
@@ -59,8 +59,8 @@ const Footer = () => {
       </div>
 
       {/* Bottom Text */}
-      <p className="text-center text-gray-400 text-sm mt-4">
-        © 2025 Saurov Pal. All rights reserved.
+      <p className="text-center  text-gray-400 text-xl mt-4">
+        © 2025 Sourov Pal. All rights reserved.
       </p>
     </footer>
   );

@@ -106,7 +106,7 @@ const Contact = () => {
           className="rounded-2xl overflow-hidden shadow-lg h-[400px]"
           initial={{ opacity: 0, x: 100 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
           viewport={{ once: true }}
         >
           <iframe
