@@ -6,9 +6,9 @@ import { motion } from "framer-motion";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 w-full text-white py-6 px-6 md:px-16">
+    <footer className="bg-gray-800 w-full text-white py-6 px-6 md:px-15">
       {/* Top Section */}
-      <div className="flex flex-col md:flex-row items-center justify-between border-b border-gray-600 pb-4">
+      <div className="flex flex-col md:flex-row items-center justify-between border-b border-gray-600 pb-5">
         {/* Logo */}
         <motion.div
           initial={{ opacity: 0, x: -50 }}
