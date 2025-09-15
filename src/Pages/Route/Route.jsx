@@ -1,7 +1,6 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router";
 import Home from "../Home/Home";
-import All_Projects from "../AllProjects/All_Projects";
 import About from "../About/About"; 
 import Roots from "../Root/Roots";
 import Skills from "../Skill/Skills";
@@ -9,6 +8,8 @@ import Projects from "../Projects/Projects";
 import Contact from "../Contact/Contact";
 import Error from "../Error";
 import AllSkills from "../Skill/AllSkills";
+import All_Projects from "../Projects/AllProjects/All_Projects";
+import MoreProject from "../Projects/MoreProject/MoreProject";
 
 
 
@@ -52,6 +53,11 @@ export const router = createBrowserRouter([
         index: true,
         path: "/AllSkills",
         Component: AllSkills,
+      },
+      {
+        index: true,
+        path: "/MoreProjects",
+        Component: MoreProject,
       },
       
       
