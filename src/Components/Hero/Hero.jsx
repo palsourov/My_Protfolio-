@@ -108,7 +108,7 @@ function Hero() {
                shadow-[0_0_30px_rgba(255,255,255,0.2)]"
   >
     <img
-      src="/public/picture.jpeg"
+      src="/picture.jpeg"
       alt="Sourov Pal"
       className="w-44 h-44 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-96 lg:h-96 xl:w-[520px] xl:h-[520px] rounded-full object-cover shadow-lg border-4 border-white dark:border-gray-400 drop-shadow-[0_6px_12px_rgba(255,255,255,0.3)]"
     />
