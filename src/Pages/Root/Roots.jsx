@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Outlet } from "react-router";
-import Navbar from "../../Components/Navbar/Navbar";
+import Navbar from "../../Components/Navbar/Navbar"
 import Footer from "../../Components/Footer/Footer";  
 import { div } from "framer-motion/client";
 
