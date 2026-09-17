@@ -109,4 +109,4 @@ const AllSkills = () => {
   );
 };
 
-export default AllSkills;
+export default AllSkills

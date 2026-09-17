@@ -6,8 +6,8 @@ const academics = [
   {
     degree: "B.Sc. in Computer Science & Engineering",
     institution: "Metropolitan University, Sylhet",
-    duration: "2022 - Present",
-    result: "CGPA: 3.68 / 4.00",
+    duration: "2022 - 2026",
+    result: "CGPA: 3.69 / 4.00",
     icon: <FaUniversity className="text-indigo-400" size={40} />,
   },
   {
@@ -20,7 +20,7 @@ const academics = [
   {
     degree: "Secondary School Certificate (SSC)",
     institution: "Homeland High School",
-    duration: "2016 - 2018",
+    duration: "2016 - 2017",
     result: "GPA: 4.56 / 5.00",
     icon: <FaSchool className="text-indigo-400" size={40} />,
   },

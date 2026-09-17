@@ -40,73 +40,98 @@ const Skills = () => {
   const limitedSkills = filteredSkills.slice(0, 8);
 
   return (
-    <section id="skills" className="lg:mt-20 lg:py-15 px-6 flex-col justify-center items-center text-center min-h-screen">
-      <h2 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-indigo-400 to-gray-200 mb-4">
-        My Skills
-      </h2>
+    
+<section
+  id="skills"
+  className="lg:mt-20 lg:py-15 px-6 flex-col justify-center items-center text-center min-h-screen"
+>
+  <h2 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-indigo-400 to-gray-200 mb-4">
+    My Skills
+  </h2>
 
-      {/* ✅ Subtitle */}
-      <p className="text-gray-400 text-lg mb-8">Explore the technologies, frameworks, and tools I use to design, build, and deploy modern web applications. I work with</p>
+  <p className="text-gray-400 text-lg mb-8">
+    Explore the technologies, frameworks, and tools I use
+    to design, build, and optimize modern digital solutions.
+  </p>
 
-      {/* ✅ Filter Buttons */}
-      <div className="flex justify-center gap-4 mb-10 flex-wrap">
-        {["All", "Frontend", "Backend", "Programming", "Tools"].map((cat) => (
-          <button
-            key={cat}
-            onClick={() => setFilter(cat)}
-            className={`px-4 py-2 rounded-full font-medium transition-all duration-300 ${
-              filter === cat
-                ? "bg-indigo-500 text-white"
-                : "bg-gray-700 text-gray-300 hover:bg-indigo-400 hover:text-white"
-            }`}
-          >
-            {cat}
-          </button>
-        ))}
-      </div>
+  {/* Filter Buttons */}
+  <div className="flex justify-center gap-4 mb-10 flex-wrap">
+    {[
+      "All",
+      "Marketing",
+      "Languages",
+      "Frontend",
+      "Backend",
+      "CMS",
+      "Integrations",
+      "Tools",
+      "CRM & Communication",
+    ].map((cat) => (
+      <button
+        key={cat}
+        onClick={() => setFilter(cat)}
+        className={`px-4 py-2 rounded-full font-medium transition-all duration-300 ${
+          filter === cat
+            ? "bg-indigo-500 text-white"
+            : "bg-gray-700 text-gray-300 hover:bg-indigo-400 hover:text-white"
+        }`}
+      >
+        {cat}
+      </button>
+    ))}
+  </div>
 
-      {/* ✅ Skills Grid */}
-      <div className="grid md:grid-cols-4 sm:grid-cols-2 gap-10 max-w-6xl mx-auto">
-        {limitedSkills.map((skill, index) => (
+  {/* Skills Grid */}
+  <div className="grid md:grid-cols-4 sm:grid-cols-2 gap-10 max-w-6xl mx-auto">
+    {limitedSkills.map((skill, index) => (
+      <motion.div
+        key={skill.name}
+        whileHover={{ scale: 1.1, y: -5 }}
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: index * 0.1 }}
+        className="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all"
+      >
+        <div className="flex justify-center mb-4">
+          {skill.icon}
+        </div>
+
+        <h3 className="text-2xl font-semibold mb-2 text-indigo-400">
+          {skill.name}
+        </h3>
+
+        <div className="w-full bg-gray-700 rounded-full h-4">
           <motion.div
-            key={index}
-            whileHover={{ scale: 1.1, y: -5 }}
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
-            className="bg-gray-800 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all"
-          >
-            <div className="flex justify-center mb-4">{skill.icon}</div>
-            <h3 className="text-2xl font-semibold mb-2 text-indigo-400">{skill.name}</h3>
-            <div className="w-full bg-gray-700 rounded-full h-4">
-              <motion.div
-                className="bg-indigo-500 h-4 rounded-full"
-                initial={{ width: 0 }}
-                whileInView={{
-                  width:
-                    skill.level === "Advanced"
-                      ? "100%"
-                      : skill.level === "Intermediate"
-                      ? "70%"
-                      : "50%",
-                }}
-                transition={{ duration: 1.5 }}
-              ></motion.div>
-            </div>
-            <p className="mt-2 text-indigo-300 text-sm">{skill.level}</p>
-          </motion.div>
-        ))}
-      </div>
+            className="bg-indigo-500 h-4 rounded-full"
+            initial={{ width: 0 }}
+            whileInView={{
+              width:
+                skill.level === "Advanced"
+                  ? "100%"
+                  : skill.level === "Intermediate"
+                  ? "70%"
+                  : "50%",
+            }}
+            transition={{ duration: 1.5 }}
+          />
+        </div>
 
-      {/* ✅ View More Button */}
-      <div className="mt-12">
-        <Link to="/AllSkills">
+        <p className="mt-2 text-indigo-300 text-sm">
+          {skill.level}
+        </p>
+      </motion.div>
+    ))}
+  </div>
+
+  {/* View More Button */}
+  <div className="mt-12">
+   <Link to="/AllSkills">
           <button className="px-6 py-3 rounded-xl bg-indigo-500 text-white font-semibold shadow-md hover:bg-indigo-600 transition-all duration-300">
             View More
           </button>
         </Link>
-      </div>
-    </section>
+  </div>
+</section>
   );
 };
 
