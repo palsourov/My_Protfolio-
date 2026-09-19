@@ -38,7 +38,7 @@ const Navbar = () => {
         {" "}
         Skills
       </NavLink>
-      <NavLink
+      {/* <NavLink
         className={({ isActive }) =>
           isActive
             ? "border-b-2   font-semibold text-indigo-400 lg:text-xl text-[17px] "
@@ -48,7 +48,7 @@ const Navbar = () => {
       >
         {" "}
         Projects
-      </NavLink>
+      </NavLink> */}
       <NavLink
         className={({ isActive }) =>
           isActive
